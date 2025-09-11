@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { FiDownload, FiMail, FiGithub, FiLinkedin, FiExternalLink, FiGlobe, FiArrowRight, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiDownload, FiMail, FiGithub, FiLinkedin, FiExternalLink, FiArrowRight, FiPhone, FiMapPin } from 'react-icons/fi';
+import WebsiteLink from './WebsiteLink';
 
 export default function PortfolioPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -255,9 +256,7 @@ export default function PortfolioPage() {
                 <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                   <FiGithub size={22} />
                 </a>
-                <a href="https://yourwebsite.com" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
-                  <FiGlobe size={22} />
-                </a>
+                <WebsiteLink />
               </div>
 
               {/* Languages */}
@@ -675,9 +674,7 @@ export default function PortfolioPage() {
               <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                 <FiGithub size={22} />
               </a>
-              <a href="https://yourwebsite.com" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
-                <FiGlobe size={22} />
-              </a>
+              <WebsiteLink />
             </div>
           </div>
 

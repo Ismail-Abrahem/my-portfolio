@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   compress: true,
-  swcMinify: true, // Smaller JS
   reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
