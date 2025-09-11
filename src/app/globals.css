@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: 222.2 84% 4.9%;
+  --background: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%; /* Light gray in light mode */
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --foreground: 210 40% 98%;
+  --background: 222.2 84% 4.9%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%; /* Dark gray in dark mode */
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  border-color: hsl(var(--border));
+}
+
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h4, h5, h6 {
+  color: hsl(var(--foreground));
+}
+
+h3 {
+  color: #0eb3f5be !important;
+}
+
+/* Update all elements to use consistent secondary colors */
+.skill-item, 
+.language-item, 
+.tech-badge,
+.education-item {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* Hover states */
+.skill-item:hover, 
+.language-item:hover, 
+.tech-badge:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+textarea::placeholder, input::placeholder {
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+}
+
+/* Responsive skills grid */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .skill-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  
+  .skill-item {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Project image aspect ratio */
+.project-image-container {
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+/* Contact info alignment */
+.contact-info-item {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* Footer layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+
+/* Ensure gradient text is visible */
+.bg-gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary)) / 0.6);
+}
+
+/* Scroll animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button hover effects for both light and dark modes */
+.btn-primary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--secondary) / 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+}
+
+.bg-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 2; /* Add this standard property */
+}
+
+.bg-green-100 {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+}
+
+.text-green-700 {
+  color: hsl(var(--primary));
+}
+
+.bg-red-100 {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+}
+
+.text-red-700 {
+  color: hsl(var(--destructive));
+}
+
+/* Ensure images don't overflow */
+.next-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix for image containers */
+.relative {
+  position: relative;
+}
+
+/* Project image container aspect ratio */
+.project-image-container {
+  aspect-ratio: 16/9;
+}
+
+/* Smooth transitions for images */
+.next-image-wrapper img {
+  transition: transform 0.3s ease;
 }
