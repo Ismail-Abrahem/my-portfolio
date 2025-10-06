@@ -3,8 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { FiDownload, FiMail, FiGithub, FiLinkedin, FiExternalLink, FiArrowRight, FiPhone, FiMapPin } from 'react-icons/fi';
-import WebsiteLink from './WebsiteLink';
+import { FiDownload, FiMail, FiGithub, FiLinkedin, FiExternalLink, FiArrowRight, FiPhone, FiMapPin, FiGlobe } from 'react-icons/fi';
 
 export default function PortfolioPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -144,11 +143,25 @@ export default function PortfolioPage() {
       logo: "/assets/experiences/exp3.png"
     },
     {
+      company: "Rapid Säkerhet AB",
+      position: "Security Guard",
+      period: "2023 - 2025",
+      description: "Monitored and operated advanced security systems and access controls across multiple client sites. Conducted regular patrols, security checks, and coordinated incident response operations. Ensured compliance with safety protocols and maintained detailed activity documentation.",
+      logo: "/assets/experiences/exp4.png"
+    },
+    {
+      company: "PostNord AB",
+      position: "Delivery Driver",
+      period: "2022 - 2023",
+      description: "Managed daily package distribution routes and ensured timely deliveries to both residential and business customers. Maintained high service standards through direct client interactions and efficient route planning. Contributed to PostNord's logistics operations with reliable package handling.",
+      logo: "/assets/experiences/exp5.png"
+    },
+    {
       company: "Randstad AB",
       position: "Video Coding Specialist",
-      period: "2017 - 2023",
+      period: "2017 - 2022",
       description: "Managed precise image analysis and data processing for postal logistics systems. Specialized in meticulous review of package imagery, administration of customs declarations, and regulatory compliance. Developed strong attention to detail and systematic workflow management.",
-      logo: "/assets/experiences/exp4.png"
+      logo: "/assets/experiences/exp6.png"
     }
   ];
 
@@ -177,7 +190,7 @@ export default function PortfolioPage() {
     {
       title: "Spelsida (Gaming Database)",
       description: "CMS-driven gaming database built with Umbraco. Features custom API integrations, content management system, and dynamic frontend rendering.",
-      technologies: ["Umbraco CMS", "ASP.NET", "JavaScript", "API Integration", "Custom Modules"],
+      technologies: ["Umbraco CMS", "ASP.NET", "JavaScript", "API Integration"],
       image: "/assets/projects/project4.jpg",
       link: "https://github.com/Ismail-Abrahem/UmbracoGame"
     }
@@ -256,7 +269,9 @@ export default function PortfolioPage() {
                 <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                   <FiGithub size={22} />
                 </a>
-                <WebsiteLink />
+                <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
+                  <FiGlobe size={22} />
+                </a>
               </div>
 
               {/* Languages */}
@@ -274,7 +289,7 @@ export default function PortfolioPage() {
               {/* Action Buttons */}
               <div className="space-y-4">
                 <button
-                  onClick={() => window.open('/certifications/IsmailAbrahemCV.pdf', '_blank')}
+                  onClick={() => window.open('/certifications/CV.pdf', '_blank')}
                   className="btn-primary w-full py-3 px-6 rounded-xl flex items-center justify-center gap-3 shadow-sm hover-lift hover:shadow-md font-medium hover:border-primary/50 hover:bg-primary/10"
                 >
                   <FiDownload size={18} />
@@ -674,7 +689,9 @@ export default function PortfolioPage() {
               <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                 <FiGithub size={22} />
               </a>
-              <WebsiteLink />
+              <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
+                  <FiGlobe size={22} />
+              </a>
             </div>
           </div>
 
