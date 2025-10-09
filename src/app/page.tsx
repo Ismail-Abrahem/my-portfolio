@@ -167,6 +167,13 @@ export default function PortfolioPage() {
 
   const projects = [
     {
+      title: "E-Commerce Dashboard",
+      description: "Full-stack e-commerce platform with React/Next.js frontend and .NET backend. Features admin dashboard with CRUD operations, shopping cart, checkout system, user authentication, and coupon management.",
+      technologies: ["Next.js", "TypeScript", "ASP.NET", "SQLite", "Entity Framework", "CRUD"],
+      image: "/assets/projects/project5.jpg",
+      link: "https://github.com/Ismail-Abrahem/E-Commerce-Dashboard"
+    },
+    {
       title: "Vällingby Körakademin AB",
       description: "Full-stack driving school platform with Next.js frontend and ASP.NET backend. Features responsive design, course management system, and upcoming payment & schedule system.",
       technologies: ["Next.js", "TypeScript", "ASP.NET", "MongoDB", "Tailwind CSS"],
@@ -690,7 +697,7 @@ export default function PortfolioPage() {
                 <FiGithub size={22} />
               </a>
               <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
-                  <FiGlobe size={22} />
+                <FiGlobe size={22} />
               </a>
             </div>
           </div>
