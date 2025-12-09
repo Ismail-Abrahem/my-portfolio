@@ -298,7 +298,7 @@ description: "Architected and maintained a production game server environment, d
                 <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                   <FiGithub size={22} />
                 </a>
-                <a href="https://www.tibia.swev.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
+                <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                   <FiGlobe size={22} />
                 </a>
               </div>
@@ -719,7 +719,7 @@ description: "Architected and maintained a production game server environment, d
               <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                 <FiGithub size={22} />
               </a>
-              <a href="https://www.tibia.swev.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
+              <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                 <FiGlobe size={22} />
               </a>
             </div>
