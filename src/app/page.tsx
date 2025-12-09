@@ -104,23 +104,38 @@ export default function PortfolioPage() {
   };
 
   const skillsByCategory = {
+    'Languages & Tools': [
+      'C#', 'C++', 'PHP', 'LUA', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL',
+      'Git', 'Docker', 'Bash Scripting', 'Linux Command Line',
+      'Visual Studio', 'VS Code'
+    ],
     'Frontend Development': [
-      'HTML', 'CSS', 'JavaScript', 'TypeScript',
-      'React', 'Next.js', 'Blazor', 'Responsive Design'
+      'React', 'Next.js', 'Blazor', 'Responsive Design',
+      'Tailwind CSS', 'CSS-in-JS'
     ],
     'Backend Development': [
-      'C#', '.NET Core', 'ASP.NET', 'MVC Framework', 'Entity Framework',
-      'RESTful APIs', 'Microservices', 'API Development'
+      '.NET Core', 'ASP.NET', 'MVC Framework', 'Entity Framework',
+      'RESTful APIs', 'Microservices', 'API Development',
+      'Node.js', 'Express.js', 'Server-side Rendering'
     ],
     'Database & DevOps': [
-      'SQL', 'MongoDB', 'Docker', 'Azure', 'DevOps', 'Git'
+      'MySQL', 'MariaDB', 'PostgreSQL', 'SQLite', 'MongoDB',
+      'Azure', 'DevOps', 'Docker Compose', 'Linux Server Administration',
+      'Ubuntu Server', 'Apache', 'CI/CD Pipelines'
     ],
     'CMS & Specializations': [
-      'Umbraco CMS', 'CMS Integration', 'E-commerce', 'Payment Integration'
+      'Umbraco CMS', 'CMS Integration', 'E-commerce',
+      'Payment Integration', 'Headless CMS'
     ]
-  };
+};
 
   const experiences = [
+    {
+    company: "Freelance Developer",
+    position: "Full-Stack Developer",
+    period: "2025 - Present",
+description: "Architected and maintained a production game server environment, developing C++ backend systems for real-time gameplay and LUA scripts for custom features. Built PHP administration tools for server management and player support. Implemented containerized deployment with Docker, optimized MySQL/MariaDB databases for performance, and managed Ubuntu Linux server operations, gaining expertise in full-stack system architecture and production infrastructure.",    logo: "/assets/experiences/exp7.png"
+  },
     {
       company: "Vällingby Körakademin AB",
       position: "Full-Stack Developer",
@@ -167,9 +182,16 @@ export default function PortfolioPage() {
 
   const projects = [
     {
+  title: "Custom Tibia Server",
+  description: "Complete game hosting solution featuring C++ server backend, LUA scripting engine, and PHP-based administrative interface. Containerized with Docker for service isolation, utilizing MySQL/MariaDB with phpMyAdmin, and deployed on Ubuntu Linux server.",
+  technologies: ["C++", "LUA", "PHP", "Docker", "MySQL/MariaDB", "phpMyAdmin", "Linux", "Ubuntu"],
+  image: "/assets/projects/project6.jpg",
+  link: "https://tibia.swev.se/"
+},
+    {
       title: "E-Commerce Dashboard",
-      description: "Full-stack e-commerce platform with React/Next.js frontend and .NET backend. Features admin dashboard with CRUD operations, shopping cart, checkout system, user authentication, and coupon management.",
-      technologies: ["Next.js", "TypeScript", "ASP.NET", "SQLite", "Entity Framework", "CRUD"],
+      description: "Full-stack e-commerce platform with React/Next.js frontend and .NET backend. Features admin dashboard with CRUD operations, shopping cart, checkout system, payment integration, user authentication, and coupon management.",
+      technologies: ["Next.js", "TypeScript", "ASP.NET", "SQLite", "Entity Framework", "CRUD", "API"],
       image: "/assets/projects/project5.jpg",
       link: "https://github.com/Ismail-Abrahem/E-Commerce-Dashboard"
     },
@@ -276,7 +298,7 @@ export default function PortfolioPage() {
                 <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                   <FiGithub size={22} />
                 </a>
-                <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
+                <a href="https://www.tibia.swev.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                   <FiGlobe size={22} />
                 </a>
               </div>
@@ -356,15 +378,16 @@ export default function PortfolioPage() {
           >
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Entry-Level Full Stack Developer
+                Full Stack Developer
               </h1>
               <h3 className="text-xl text-muted-foreground mb-6 font-light float-animation">
                 Crafting digital experiences with modern technologies
               </h3>
               <p className="text-lg leading-relaxed max-w-2xl mx-auto text-foreground/90">
-                Fullstack developer with 1 year of experience and skilled in C#, APIs and SQL technologies. Developed accessible web applications using React,
-                Next.js, Blazor and .NET technologies. Passionate about clean code, performance optimization,
-                and creating intuitive user experiences.
+                Full-stack developer with 2 years of experience specializing in C#, .NET, and modern web technologies. 
+    Built scalable applications including game server infrastructure with C++/LUA/PHP and production-ready 
+    web platforms using React, Next.js, and ASP.NET. Passionate about clean architecture, performance 
+    optimization, and creating intuitive user experiences.
               </p>
             </div>
           </section>
@@ -384,7 +407,7 @@ export default function PortfolioPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-card rounded-2xl p-8 shadow-2xl border border-border hover-lift group"
                 >
-                  <div className="flex items-start gap-6">
+                  <div className="flex flex-col sm:flex-row items-start gap-5 sm:gap-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center text-white shadow-lg overflow-hidden relative">
                       <Image
                         src={exp.logo}
@@ -404,7 +427,7 @@ export default function PortfolioPage() {
                         }}
                       />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 w-full min-w-0">
                       <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
                         {exp.position}
                       </h3>
@@ -696,7 +719,7 @@ export default function PortfolioPage() {
               <a href="https://github.com/Ismail-Abrahem" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                 <FiGithub size={22} />
               </a>
-              <a href="https://www.vällingbykörakademin.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
+              <a href="https://www.tibia.swev.se/" className="text-muted-foreground hover:text-primary p-3 rounded-full bg-secondary hover:bg-primary/10 hover-lift">
                 <FiGlobe size={22} />
               </a>
             </div>
