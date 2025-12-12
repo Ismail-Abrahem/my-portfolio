@@ -520,33 +520,6 @@ export default function PortfolioPage() {
             </div>
           </section>
 
-          {/* Skills for Mobile (duplicate in main content) */}
-          <div className="lg:hidden fade-in-section" id="skills">
-            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Skills & Technologies
-            </h2>
-            <div className="bg-card rounded-2xl p-8 shadow-2xl border border-border">
-              <div className="space-y-6">
-                {Object.entries(skillsByCategory).map(([category, skills]) => (
-                  <div key={category} className="space-y-3">
-                    <h3 className="font-semibold text-lg text-foreground mb-2">{category}</h3>
-                    <div className="grid grid-cols-2 gap-3">
-                      {skills.map((skill, index) => (
-                        <span
-                          key={index}
-                          className="skill-item px-4 py-3 rounded-lg text-sm text-center font-medium cursor-default bg-secondary text-secondary-foreground shadow-sm hover:shadow-md transition-all min-h-[3rem] flex items-center justify-center"
-                          title={skill}
-                        >
-                          <span className="line-clamp-2">{skill}</span>
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* Experience */}
           <section
             id="experience"
@@ -616,16 +589,16 @@ export default function PortfolioPage() {
                   className="bg-card rounded-2xl overflow-hidden shadow-2xl border border-border hover-lift group"
                 >
                   <div className="project-image-container bg-gradient-to-br from-secondary to-secondary/50 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 z-10">
-                      <a
-                        href={project.link}
-                        className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform duration-300 shadow-lg z-20"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FiExternalLink size={18} />
-                      </a>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-80 md:opacity-0 md:group-hover:opacity-80 transition-opacity duration-300 flex items-end justify-end p-4 z-10">
+  <a
+    href={project.link}
+    className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform duration-300 shadow-lg z-20"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FiExternalLink size={18} />
+  </a>
+</div>
                     <div className="w-full h-full relative">
                       <Image
                         src={project.image}
