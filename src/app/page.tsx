@@ -99,7 +99,7 @@ export default function PortfolioPage() {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:ismailabrahem990719@gmail.com';
+    window.location.href = 'mailto:ismail@abrahem.se';
   };
 
   const handlePhoneClick = () => {
@@ -729,7 +729,7 @@ export default function PortfolioPage() {
                       </div>
                       <div className="min-w-0">
                         <p className="font-medium text-foreground group-hover:text-primary transition-colors truncate">
-                          ismailabrahem990719@gmail.com
+                          ismail@abrahem.se
                         </p>
                         <p className="text-sm text-muted-foreground">Email</p>
                       </div>
