@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { FiGlobe } from "react-icons/fi";
 
 export default function WebsiteLink() {
-  const [url, setUrl] = useState<string>("https://my-portfolio-tau-five-50.vercel.app/"); // fallback
+  const [url, setUrl] = useState<string>("https://abrahem.se/"); // fallback
 
   useEffect(() => {
     // Update with env variable on client
