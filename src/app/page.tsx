@@ -181,20 +181,20 @@ export default function PortfolioPage() {
     {
       company: "Freelance Developer",
       position: "Full-Stack Developer",
-      period: "2025 - Present",
+      period: "2025 - 2026",
       description: "Building and maintaining a production Tibia private game server infrastructure that consistently achieves 99.8% uptime through Docker containerization and VPS management. The server supports over 300 registered players in MySQL/MariaDB while maintaining data security and performance. Currently serving 15+ active concurrent players who engage with both the game server (C++ backend with custom LUA scripting) and the PHP-based administration website, demonstrating full-stack system architecture skills in a live production environment.",
       logo: "/assets/experiences/exp7.png"
     },
     {
       company: "Vällingby Körakademin AB",
       position: "Full-Stack Developer",
-      period: "2025 - Present",
+      period: "2025 - 2026",
       description: "Leading the technical development of a comprehensive driving school platform that has increased customer acquisition by 150% through improved digital presence and accessibility. Built with Next.js and .NET Core, the platform allows potential students to easily discover courses, view schedules, and access information - with upcoming Stripe payment integration designed to streamline course purchases. The custom-built student management dashboard has reduced administrative workload by 50% through automation, while real-time notifications keep students engaged throughout their learning journey.",
       logo: "/assets/experiences/exp1.png"
     },
     {
       company: "Carelyo Inc.",
-      position: "Back-end Developer",
+      position: "Back-end Developer (Intern)",
       period: "2024-2025",
       description: "Implemented a secure payment infrastructure using Stripe that successfully processed hundreds of monthly transactions for the eHealth platform. Developed robust authentication systems with bearer tokens that maintain 99.9% uptime while ensuring data security and PCI compliance. The optimized checkout process and webhook handling significantly improved transaction success rates, providing patients with reliable payment options for their healthcare services.",
       logo: "/assets/experiences/exp2.png"
